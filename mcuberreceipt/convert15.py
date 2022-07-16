@@ -16,7 +16,7 @@ Image1 = Image.open("screenshot/"+image)
 # the original image does not get affected
 Image1copy = Image1.copy()
 # Fake receipt
-Image2 = Image.open("/Users/santiagocampo/Documents/ownprogramms/mcuberreceipt/17-15/15.png")
+Image2 = Image.open(""""Your Path"""")
 Image2copy = Image2.copy()
 # paste image giving dimensions
 Image1copy.paste(Image2copy, (500, 510))
@@ -33,7 +33,7 @@ smtp.ehlo()
 smtp.starttls()
 
 # Login with your email and password
-smtp.login('santiagocampojurado@gmail.com', 'zvsaoxjvgbuvjphu')
+smtp.login(""""Your Mail"""", """"Your Password"""")
 
 
 # send our email message 'msg' to our boss
@@ -100,17 +100,15 @@ def message(subject="Python Notification",
 
 
 # Call the message function
-msg = message("Taxi receipt hacked!", "Here you are!",
+msg = message(""""Your Subjecct"""", """"Your Body"""",
 			pathfake+image)
 
 # Make a list of emails, where you wanna send mail
-to = ["santiagocampojurado@gmail.com"]
+to = [""""Them Path""""]
 
 # Provide some data to the sendmail function!
-smtp.sendmail(from_addr="santiagocampojurado@gmail.com",
+smtp.sendmail(from_addr=""""Your Mail"""",
 			to_addrs=to, msg=msg.as_string())
 
 # Finally, don't forget to close the connection
 smtp.quit()
-
-#zvsaoxjvgbuvjphu
