@@ -104,7 +104,7 @@ msg = message(""""Your Subjecct"""", """"Your Body"""",
 			pathfake+image)
 
 # Make a list of emails, where you wanna send mail
-to = [""""Them Path""""]
+to = [""""Them Mail""""]
 
 # Provide some data to the sendmail function!
 smtp.sendmail(from_addr=""""Your Mail"""",
