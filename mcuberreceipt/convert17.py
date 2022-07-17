@@ -10,7 +10,7 @@ from email.mime.multipart import MIMEMultipart
 
 pathfake = "convert/"+"C7"
 image = input("Screenshot name: ")
-Image1 = Image.open("screenshot/"+image)
+Image1 = Image.open("screenshot/"+image+".PNG")
 
 # make a copy the image so that
 # the original image does not get affected
@@ -21,7 +21,7 @@ Image2copy = Image2.copy()
 # paste image giving dimensions
 Image1copy.paste(Image2copy, (500, 510))
 # save the image
-Image1copy.save(pathfake+image)
+Image1copy.save(pathfake+image+".PNG")
 #Image1copy.show()
 
 # send the image by email
@@ -101,7 +101,7 @@ def message(subject="Python Notification",
 
 # Call the message function
 msg = message(""""Your Subjecct"""", """"Your Body"""",
-			pathfake+image)
+			pathfake+image+".PNG")
 
 # Make a list of emails, where you wanna send mail
 to = [""""Them Mail""""]
